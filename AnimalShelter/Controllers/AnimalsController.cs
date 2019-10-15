@@ -20,13 +20,12 @@ namespace AnimalShelter.Controllers
       return View(model);
     }
 
-
     public ActionResult New()
     {
         return View();
     }
 
-    [HttpPost]
+    [HttpPost("/animals/New")]
     public ActionResult Create(Animal animal)
     {
         _db.Animals.Add(animal);

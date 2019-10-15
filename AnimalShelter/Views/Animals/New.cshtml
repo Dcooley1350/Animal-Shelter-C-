@@ -8,24 +8,25 @@
 @using (Html.BeginForm())
 {
     @Html.LabelFor(model => model.Name)
-    @Html.TextBoxFor(model => model.Name)
+    @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
     <br>
     @Html.LabelFor(model => model.Type)
-    @Html.TextBoxFor(model => model.Type)
+    @Html.TextBoxFor(model => model.Type, new { @class = "form-control" })
     <br>
     @Html.LabelFor(model => model.Gender)
-    @Html.TextBoxFor(model => model.Gender)
+    @Html.TextBoxFor(model => model.Gender, new { @class = "form-control" })
     <br>
     @Html.LabelFor(model => model.Breed)
-    @Html.TextBoxFor(model => model.Breed)
+    @Html.TextBoxFor(model => model.Breed, new { @class = "form-control" })
     <br>
     @Html.LabelFor(model => model.Date_of_admit)
-    @Html.TextBoxFor(model => model.Date_of_admit)
+    @Html.TextBoxFor(model => model.Date_of_admit, new { @class = "form-control" })
     <br>
     @Html.LabelFor(model => model.Description)
-    @Html.TextBoxFor(model => model.Description)
+    @Html.TextBoxFor(model => model.Description, new { @class = "form-control" })
     <br>
     <input type="submit" value="Add Animal" />
+    
 }
 
-<button class="btn btn-light">@Html.ActionLink("Back To List", "Index")</button>
+<button class="btn btn-secondary">@Html.ActionLink("Back To List", "Index")</button>
