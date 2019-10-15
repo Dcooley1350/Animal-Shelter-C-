@@ -20,6 +20,29 @@ namespace AnimalShelter.Controllers
       return View(model);
     }
 
+    [HttpPost]
+    public ActionResult Index(string orderBy)
+    {
+      List<Animal> model = new List<Animal> {};
+      if (orderBy == "Name")
+      {
+        model = _db.Animals.OrderBy(x => x.Name).ToList();
+      }
+      else if (orderBy == "Type")
+      {
+        model = _db.Animals.OrderBy(x => x.Type).ToList();
+      }
+      else if (orderBy == "Breed")
+      {
+        model = _db.Animals.OrderBy(x => x.Breed).ToList();
+      }
+      else
+      {
+        model = _db.Animals.ToList();
+      }
+      return View(model);
+    }
+
     public ActionResult New()
     {
         return View();

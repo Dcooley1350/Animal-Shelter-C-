@@ -21,3 +21,31 @@
 <button type="button" class="btn btn-secondary">
     @Html.ActionLink("Add A New Animal", "New")
 </button> 
+
+
+<form method="post" action="/animals">
+
+    <p>Order by:</p>
+    @Html.RadioButton("orderBy", "Name")
+    <label for="Name">Name</label>
+    @Html.RadioButton("orderBy", "Type")
+    <label for="Type">Type</label>
+    @Html.RadioButton("orderBy", "Breed")
+    <label for="Breed">Breed</label>
+    
+    <!-- <p>Order: </p>
+    @Html.RadioButton("order", "Ascending")
+    <label for="Ascending">Ascending</label>
+    @Html.RadioButton("order", "Descending")
+    <label for="Descending">Descending</label>
+
+    <p>Gender: </p>
+    @Html.RadioButton("gender", "Male")
+    <label for="Male">Male</label>
+    @Html.RadioButton("gender", "Female")
+    <label for="Female">Female</label>
+    @Html.RadioButton("gender", "Both")
+    <label for="Both">Both</label> -->
+    <br>
+    <button class="btn btn-secondary" type="submit">Submit</button>
+</form>
