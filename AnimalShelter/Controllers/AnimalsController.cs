@@ -36,7 +36,7 @@ namespace AnimalShelter.Controllers
       {
         model = _db.Animals.Where(x => x.Gender.ToLower() == "male").OrderBy(x => x.Breed).ToList();
       }
-      if (orderBy == "Name" && gender == "Female")
+      else if (orderBy == "Name" && gender == "Female")
       {
         model = _db.Animals.Where(x => x.Gender.ToLower() == "female").OrderBy(x => x.Name).ToList();
       }
@@ -48,7 +48,7 @@ namespace AnimalShelter.Controllers
       {
         model = _db.Animals.Where(x => x.Gender.ToLower() == "female").OrderBy(x => x.Breed).ToList();
       }
-      if (orderBy == "Name" && gender == "Both")
+      else if (orderBy == "Name" && gender == "Both")
       {
         model = _db.Animals.OrderBy(x => x.Name).ToList();
       }
