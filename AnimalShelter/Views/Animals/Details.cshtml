@@ -12,5 +12,9 @@
 <p>@Html.DisplayNameFor(model => model.Gender): @Html.DisplayFor(model => model.Gender)</p>
 <p>Date of admittance: @Html.DisplayFor(model => model.Date_of_admit)</p>
 <hr />
+@using (Html.BeginForm())
+{
+    <input type="submit" value="Delete" />
+}
 
 <button class="btn btn-secondary">@Html.ActionLink("Back To List", "Index")</button>
